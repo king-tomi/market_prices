@@ -31,7 +31,7 @@ def prices():
                 continue
             else:
                 name = t[0]
-                price = t[1].replace("N", '').replace(",",'')
-                temp.append(Product(name=name, price=price))
+                price = t[1].replace("N", '').replace(",",'').replace(' – ', '')
+                temp.append(Product(name=name, price=Decimal(price)))
         res[p] = temp
     return res

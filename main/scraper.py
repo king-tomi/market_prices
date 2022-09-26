@@ -6,7 +6,7 @@ from selenium import webdriver
 import logging
 from datetime import datetime
 
-logging.basicConfig(filename="record.log", filemode = "a",format = '%(name)s - %(levelname)s - %(message)s',level=logging.DEBUG)
+logging.basicConfig(filename="debug.log", filemode = "a",format = '%(name)s - %(levelname)s - %(message)s',level=logging.DEBUG)
 
 
 def get_page(url: str) -> Union[BeautifulSoup, None]:
