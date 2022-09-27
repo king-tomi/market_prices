@@ -1,10 +1,8 @@
-from pprint import pprint
 from typing import Dict, Union
 from bs4 import BeautifulSoup
 import requests
 from selenium import webdriver
 import logging
-from datetime import datetime
 
 logging.basicConfig(filename="debug.log", filemode = "a",format = '%(name)s - %(levelname)s - %(message)s',level=logging.DEBUG)
 
@@ -53,7 +51,3 @@ def scrape(url: str) -> Union[Dict[str, str], None]:
                     temp.append(n)
             res[t] = temp
         return res
-
-
-if __name__ == '__main__':
-    pprint(scrape("https://nigerianprice.com/prices-of-commodities-in-nigeria/"))
